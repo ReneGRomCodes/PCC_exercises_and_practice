@@ -68,7 +68,7 @@ car = "subaru"
 car_2 = "Subaru"
 
 print(car == car_2 and "Subaru" == car_2)  # False: only '"Subaru" == car_2' returns 'True' BUT NOT 'car == car_2'.
-print(car == car_2 or "Subaru" == car_2)  # True: ONE side returns 'True' therefor the entire statement returns 'False'.
+print(car == car_2 or "Subaru" == car_2)  # True: ONE side returns 'True' therefor the entire statement returns 'True'.
 
 # Whether an item is in a list:
 pizzas = ["pepperoni", "cheese", "veggie", "buffalo chicken"]
