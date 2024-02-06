@@ -139,7 +139,7 @@ else:
 
 # Exercise 5-7 Favorite Fruit: Choose three of your favorite fruits and add them to a list called 'favorite_fruits, then
 # write a series of five 'if' statements that check for certain fruits in your list. If the fruit is in your list, the
-# 'if' block should print a statement such as "Your really like bananas!".
+# 'if' block should print a statement such as "You really like bananas!".
 
 
 favorite_fruits = ["strawberries", "bananas", "cherries"]
