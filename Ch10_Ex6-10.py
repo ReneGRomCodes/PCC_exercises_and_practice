@@ -80,9 +80,9 @@ except FileNotFoundError:
 # reads the files you found at Project Gutenberg and determines how many times the word 'the' appears in each text.
 
 
-beowulf = "Ch10_beowulf.txt"
-faustus = "Ch10_faustus.txt"
-moby_dick = "Ch10_moby_dick.txt"
+beowulf = "Ch10_beowulf.txt"  # File not part of the repository!!!
+faustus = "Ch10_faustus.txt"  # File not part of the repository!!!
+moby_dick = "Ch10_moby_dick.txt"  # File not part of the repository!!!
 
 
 with open(beowulf, encoding="utf-8") as f_object:
