@@ -1,0 +1,4 @@
+In Python you can say 'hello' to the world
+In Python you can use lists to store you favorite pizza toppings
+In Python you can write dictionaries to store you friends favorite programming languages
+In Python you can use user input to ask the user for their input
