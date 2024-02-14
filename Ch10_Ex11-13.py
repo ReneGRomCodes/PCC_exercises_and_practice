@@ -5,7 +5,7 @@
 
 import json
 
-filename = "Ch10_favorite_number.txt"
+filename = "Ch10_favorite_number.json"
 
 with open(filename, "w") as f_object:
     n = input("What is your favorite number? ")
@@ -37,3 +37,43 @@ else:
 # last used the program.
 # Before printing a welcome back message in 'greet_user()', ask the user if this is the correct username. If it is not,
 # call 'get_new_username()' to get the correct username.
+
+
+def get_stored_username():
+    """Gets stored username if available."""
+    filename = "Ch10_username.json"
+    try:
+        with open(filename) as f_obj:
+            username = json.load(f_obj)
+    except FileNotFoundError:
+        return None
+    else:
+        return username
+
+
+def get_new_username():
+    """Prompts for a new username."""
+    username = input("What is your name? ")
+    filename = "Ch10_username.json"
+    with open(filename, "w") as f_obj:
+        json.dump(username, f_obj)
+    return username
+
+
+def greet_user():
+    """Greets the user by name."""
+    username = get_stored_username()
+
+    if username:
+        check_user = input("Is " + username + " your username? (y/n) ")
+        if check_user.lower() == "y":
+            print("Welcome back,", username + "!")
+        else:
+            username = get_new_username()
+            print("We'll remember you when you come back,", username + "!")
+    else:
+        username = get_new_username()
+        print("We'll remember you when you come back,", username + "!")
+
+
+greet_user()
