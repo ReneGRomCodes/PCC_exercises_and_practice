@@ -47,3 +47,21 @@ class Employee():
         """Raises and returns 'annual_salary' by value 'amount'. Default is 5000."""
         self.annual_salary += amount
         return self.annual_salary
+
+
+class TestEmployee(unittest.TestCase):
+    """Tests 'Employee' class."""
+
+    def setUp(self):
+        """Creates an employee instance to use in test methods."""
+        self.employee = Employee("king", "arthur", 150000)
+
+    def test_give_default_raise(self):
+        """Tests 'give_raise()' function with default value for 'amount'."""
+        self.employee.give_raise()
+        self.assertEqual(self.employee.annual_salary, 155000)
+
+    def test_give_custom_raise(self):
+        """Tests 'give_raise()' function with custom value for 'amount'."""
+        self.employee.give_raise(10000)
+        self.assertEqual(self.employee.annual_salary, 160000)
